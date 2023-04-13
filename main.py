@@ -1,7 +1,13 @@
 from extract import createDriver, getGoogleHomepage
+import asyncio
 
-driver=createDriver()
+async def demo_get():
+    driver=createDriver()
+    homepage = getGoogleHomepage(driver)
+    driver.close()
+    return homepage
 
-homepage = getGoogleHomepage(driver)
-driver.close()
-print(homepage)
+subroutine = demo_get()
+
+test = asyncio.run(subroutine)
+print(test)
