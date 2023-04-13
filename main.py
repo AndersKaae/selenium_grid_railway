@@ -21,7 +21,7 @@ async def main():
     driver.get('https://www.google.com/')
     
     # Wait for the results to load
-    await asyncio.sleep(5)
+    await asyncio.sleep(30)
 
     # Extract the search results
     print(driver.page_source)
